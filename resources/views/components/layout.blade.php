@@ -11,6 +11,7 @@
 <body>
     <div class="container">
         <x-nav></x-nav>
+        
         <x-header></x-header>
 
         {{$slot}}
