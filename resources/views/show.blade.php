@@ -1,7 +1,8 @@
 <x-layout>
+    <x-slot name='title'>{{$paint['Painting']}}</x-slot>
     <h1>Artist: {{$paint['Artist']}}</h1>
-    <div class="d-flex justify-content-space-between">
-        <img src="{{$paint['Image']}}" alt="{{$paint['Painting']}}">
+    <div >
+        <img class="float-start me-2" src="{{$paint['Image']}}" alt="{{$paint['Painting']}}">
         <div class="ms-3">
             @foreach ($paint as $key => $value )
                 @if($key != 'Image' && $key != 'Painting' && $key != 'Artist')
