@@ -7,3 +7,4 @@ Route::redirect('/', 'paintings');
 Route::get('/paintings', [PaintingController::class, 'index']);
 Route::get('/paintings/{title}', [PaintingController::class, 'show']);
 Route::get('/artists', [PaintingController::class, 'artists']);
+Route::get('/artists/{artist}/paintings', [PaintingController::class, 'paintingsOfArtists']);

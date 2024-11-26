@@ -39,4 +39,15 @@ class PaintingController extends Controller
         }
         return view('artists', ['artists' => $artists]);
     }
+
+    public function paintingsOfArtists($artist)
+    {
+        $paintings = [];
+        foreach ($this->paintings as $paint){
+            if($paint['Artist'] == $artist){
+                $paintings[] = $paint;
+            }
+        }
+        return view('index', ['paintings' => $paintings]);
+    }
 }
